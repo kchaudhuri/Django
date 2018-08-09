@@ -9,7 +9,6 @@ def home(request):
     pets = Pet.objects.all()
     return render(request, 'home.html', {'pets' : pets})
 
-
 def pet_detail(request, id):
     try:
         pet = Pet.objects.get(id=id)
